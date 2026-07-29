@@ -547,3 +547,30 @@ body {
 .marquee-container:hover .marquee-track {
   animation-play-state: paused;
 }
+
+/* Mobile View Adjustment (para sa screens na 768px pababa) */
+@media screen and (max-width: 768px) {
+
+  /* 1. Paliitin ang padding/space sa paligid ng buong Navigation Bar */
+  nav, .navbar {
+    padding: 5px 10px !important;
+  }
+
+  /* 2. Paliitin ang font size at spacing ng mga menu items/links */
+  nav a, .navbar a, .nav-link {
+    font-size: 0.8rem !important; /* Mula sa dating ~1rem, ginawang mas maliit */
+    padding: 6px 8px !important;  /* Bawas sa space sa loob ng buttons */
+  }
+
+  /* 3. Kung naka-flex/wrap ang menu items, ayusin ang distansya nila */
+  nav ul, .nav-menu {
+    gap: 5px !important;          /* Liitan ang pagitan ng mga menu items */
+    padding: 0 !important;
+  }
+
+  /* 4. Paliitin din ang logo sa loob ng navbar (kung mayroon) */
+  .nav-logo, navbar img {
+    height: 35px !important;      /* Adjust base sa laki ng logo mo */
+  }
+
+}
