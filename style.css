@@ -286,3 +286,194 @@ body {
     padding-left: 2rem;
   }
 }
+
+
+
+/* Layout ng Header para pantay sa kaliwa at kanan */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* Ihahagis ang orasan sa gilid na kanan */
+  align-items: center;            /* Ipapantay ang vertical height sa captions */
+  padding: 15px 30px;
+  background-color: var(--primary);      /* Halimbawa ng dark background */
+}
+
+/* Container ng PST Widget */
+.pst-container {
+  width: auto;                    /* Hindi na kakainin ang buong lapad */
+  max-width: 300px;
+  background: transparent;
+}
+
+.pst-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;         /* I-align sa kanan ang text ng orasan */
+  justify-content: center;
+  background: transparent;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- KULAY AT SIZES NG TEXT (Adjustable para sa Dark BG) --- */
+
+.pst-label {
+  font-size: 0.75rem;            /* Maliit na label sa taas */
+  color: #b0b0b0;                /* Light Gray para madaling basahin */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 2px;
+}
+
+.pst-time {
+  font-size: 1.5rem;             /* Sakto lang ang laki para sa header */
+  font-weight: 800;
+  color: #ffffff;                /* Puti ang oras para litaw sa dark BG */
+  line-height: 1.1;
+}
+
+.pst-date {
+  font-size: 0.85rem;            /* Maliit na petsa sa ibaba */
+  color: #d1d5db;                /* Soft White/Light Gray */
+  margin-top: 3px;
+}
+
+
+/* Layout ng buong Header */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* Hihiwalayin ang Logos, Text, at Orasan */
+  align-items: center;            /* Mananatiling pantay sa gitna horizontally */
+  padding: 10px 20px;
+  background-color: #1b3687;      /* Ang dark blue background mo */
+}
+
+/* Group ng Logo sa Kaliwa */
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* GITNA: Dito bababa ang subtitle */
+.header-text {
+  display: flex;
+  flex-direction: column;         /* Gagawing patong ang text */
+  justify-content: center;
+  text-align: left;               /* o 'center' kung gusto mong nakagitna ang sub-title sa title */
+}
+
+.main-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sub-title {
+  color: #d1d5db;                 /* Light Gray color */
+  font-size: 0.95rem;
+  margin: 4px 0 0 0;              /* Kaunting distansya mula sa main title */
+  font-weight: 400;
+}
+
+
+/* Buong Header Background */
+.site-header {
+  background-color: #1b3687; /* Dark blue background mo */
+  padding: 12px 25px;
+  width: 100%;
+}
+
+/* Flex Container na nagpapadikit at nagpapapantay sa 3 parts (Logos, Title, Clock) */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 1. LOGOS (Kaliwa) */
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header-img.logo-larger {
+  height: 75px; /* Bahagyang mas malaki ang pangalawang logo */
+}
+
+/* 2. TITLES (Gitna) */
+.header-titles {
+  display: flex;
+  flex-direction: column; /* Napapababa nito ang sub-title sa ilalim ng H1 */
+  justify-content: center;
+}
+
+.header-titles h1 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-titles .subtitle {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+  font-weight: 400;
+}
+
+/* 3. SOCIAL + CLOCK (Kanan) */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.social-bar a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.social-bar a:hover {
+  color: #60a5fa;
+}
+
+/* PST Clock Text Styles */
+.pst-widget {
+  text-align: right;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.pst-label {
+  font-size: 0.65rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pst-time {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.pst-date {
+  font-size: 0.75rem;
+  color: #d1d5db;
+}
