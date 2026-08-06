@@ -514,11 +514,13 @@ body {
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .marquee-icon {
-  flex-shrink: 0;
+  height: 25px;      /* Taas ng logo */
+  width: auto;       /* Mapanatili ang tamang hugis ng logo */
+  flex-shrink: 0;     /* Siguradong hindi maliliit/mawawala ang logo */
   margin-right: 15px; /* Optional spacing between logo and text */
 }
 
