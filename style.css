@@ -514,15 +514,22 @@ body {
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 5px 0;
+}
+
+.marquee-icon {
+  flex-shrink: 0;
+  margin-right: 15px; /* Optional spacing between logo and text */
 }
 
 .marquee-track {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
   will-change: transform;
   /* Adjust 12s to make it faster (e.g. 8s) or slower (e.g. 20s) */
   animation: continuous-scroll 12s linear infinite; 
+  align-items: center; /* Vertically aligns image and text at the middle */
+  width: max-content; /* Keeps track items in a single horizontal row */
 }
 
 .marquee-track span {
@@ -533,15 +540,12 @@ body {
   text-transform: uppercase;
 }
 
-/* Seamless infinite scroll animation */
-@keyframes continuous-scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%); /* Moves exactly half the width so it loops perfectly */
-  }
+
+.marquee-icon {
+  /* Prevents the image from squishing if the text wraps */
+  flex-shrink: 0; 
 }
+
 
 /* Optional: Pause scrolling when hovering with mouse */
 .marquee-container:hover .marquee-track {
