@@ -546,11 +546,21 @@ body {
   flex-shrink: 0; 
 }
 
+/* Seamless infinite scroll animation */
+@keyframes continuous-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves exactly half the width so it loops perfectly */
+  }
+}
 
 /* Optional: Pause scrolling when hovering with mouse */
 .marquee-container:hover .marquee-track {
   animation-play-state: paused;
 }
+
 
 /* Mobile View Adjustment (para sa screens na 768px pababa) */
 @media screen and (max-width: 768px) {
