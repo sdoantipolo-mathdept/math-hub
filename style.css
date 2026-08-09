@@ -590,3 +590,55 @@ body {
   }
 
 }
+
+
+
+/* Layout alignment for the right section */
+.header-right {
+  display: flex;
+  align-items: right;
+  gap: 15px;
+}
+
+/* Visitor Counter Styling */
+.visitor-counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.visitor-widget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle dark translucent fill */
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.visitor-icon {
+  font-size: 1.1rem;
+  color: #ffffff; /* Adjust icon color to match your theme #00bcd4*/
+}
+
+.visitor-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+
+}
+
+.visitor-label {
+  font-size: 0.65rem;
+  color: #ffffff; /* Adjust icon color to match your theme #00bcd4*/
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 100;
+}
+
+.visitor-count {
+  font-size: 0.95rem;
+  color: #ffffff; /* Adjust icon color to match your theme #00bcd4*/
+  font-weight: bold;
+  letter-spacing: 1px;
+}
