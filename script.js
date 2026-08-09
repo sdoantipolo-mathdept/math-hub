@@ -173,6 +173,10 @@ customElements.define('special-footer', SpecialFooter)
 const namespace = "sdo-antipolo-math-hub";
 const key = "visits";
 
+
+const namespace = "sdo-antipolo-math-hub";
+const key = "visits";
+
 // Gumagamit ng countapi.net API
 fetch(`https://api.countapi.net/hit/${namespace}/${key}`)
   .then(response => {
