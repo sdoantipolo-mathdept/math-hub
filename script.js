@@ -170,19 +170,32 @@ customElements.define('special-footer', SpecialFooter)
   setInterval(updatePST, 1000);
 
 
-const projectID = "sdo-antipolo-math-hub";
+function updateVisitorCount() {
+  const counterElement = document.getElementById("visitor-count");
+  
+  // 1. Kumuha ng kasalukuyang count sa local storage
+  let currentVisits = parseInt(localStorage.getItem("sdo_math_hub_views") || "1050");
+  
+  // 2. Dagdagan ng 1
+  currentVisits++;
+  localStorage.setItem("sdo_math_hub_views", currentVisits);
+  
+  // 3. Ipakita agad sa screen (Instant display, walang loading delay)
+  counterElement.innerText = currentVisits.toLocaleString();
 
-fetch(`https://api.counterapi.dev/v1/${projectID}/visits/up`)
-  .then(res => res.json())
-  .then(data => {
-    if (data && data.count) {
-      document.getElementById("visitor-count").innerText = data.count.toLocaleString();
-    }
-  })
-  .catch(() => {
-    // Switch to simple local backup kapag nag-fail ang network
-    let localCount = localStorage.getItem("backup_visits") || 100;
-    localCount++;
-    localStorage.setItem("backup_visits", localCount);
-    document.getElementById("visitor-count").innerText = Number(localCount).toLocaleString();
-  });
+  // 4. Subukang i-sync sa external API sa background (Opsyonal)
+  fetch("https://api.countapi.net/hit/sdo-antipolo-math-hub/visits")
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.value) {
+        counterElement.innerText = data.value.toLocaleString();
+      }
+    })
+    .catch(err => {
+      // Kapag nakablock ang API, mananatili lang sa LocalStorage count (No Error Message!)
+      console.log("Using local counter backup.");
+    });
+}
+
+// Patakbuhin ang counter
+updateVisitorCount();
