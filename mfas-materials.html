@@ -3,81 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1Zrcsh9G-KHEp7JfMZMbOMVRuKsmWORS9">
-
   <title>SDO Antipolo: Mathematics Hub</title>
+  
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1Zrcsh9G-KHEp7JfMZMbOMVRuKsmWORS9">
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <style>
+    /* Basic Layout Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #0d233a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      padding: 12px;
+      cursor: pointer;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li {
+      position: relative;
+    }
+    .nav-menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .nav-menu a:hover, .nav-menu a.active {
+      background-color: #1a3d61;
+    }
+
+    /* Dropdown Menus */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #0d233a;
+      min-width: 200px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu a {
+      font-weight: normal;
+      padding: 10px 16px;
+    }
+
+    /* Mobile Responsive Media Query */
+    @media (max-width: 868px) {
+      .nav-toggle {
+        display: block; /* Show hamburger button on mobile */
+      }
+      .nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #0d233a;
+      }
+      .nav-menu.active {
+        display: flex; /* Show menu when toggle button is clicked */
+      }
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+      }
+      .nav-toggle {
+        align-self: flex-end;
+      }
+      .dropdown-menu {
+        position: static; /* Stack dropdown items inline on mobile */
+        width: 100%;
+        background-color: #091929;
+      }
+      .dropdown.open .dropdown-menu {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
-  <!-- Header -->
-<header class="site-header">
-  <div class="header-container">
-    
-    <!-- 1. KALIWA: Dalawang Logo -->
-    <div class="header-logos">
-      <img 
-        src="https://lh3.googleusercontent.com/d/1udkgGPC3lxVrZN3HNH7tVHiaYSXW_MZC" 
-        alt="DepEd Antipolo Logo" 
-        class="header-img"
-      >
-      <img 
-        src="https://lh3.googleusercontent.com/d/1V2cjrlu-ANinM0Po_WBeNbiOvsACaYdl" 
-        alt="SDO Antipolo Mathematics Dept" 
-        class="header-img logo-larger"
-      >
-    </div>
-
-    <!-- 2. GITNA: SDO Antipolo Titles (Naka-stack vertical) -->
-    <div class="header-titles">
-      <h1>SDO ANTIPOLO: MATHEMATICS HUB</h1>
-      <p class="subtitle">Centralized Mathematics Data and Resource Hub</p>
-    </div>
-
-    <!-- 3. KANAN: Facebook Icon + PST Clock -->
-    <div class="header-right">
-      <div class="social-bar">
-        <a href="https://www.facebook.com/profile.php?id=61550963996069" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-logos">
+        <img src="https://lh3.googleusercontent.com/d/1udkgGPC3lxVrZN3HNH7tVHiaYSXW_MZC" alt="DepEd Antipolo Logo" class="header-img">
+        <img src="https://lh3.googleusercontent.com/d/1V2cjrlu-ANinM0Po_WBeNbiOvsACaYdl" alt="SDO Antipolo Mathematics Dept" class="header-img logo-larger">
       </div>
-      
-      <div class="pst-container">
-        <div class="pst-widget">
-          <div class="pst-label">Philippine Standard Time</div>
-          <div id="pst-time" class="pst-time">00:00:00 AM</div>
-          <div id="pst-date" class="pst-date">Monday, January 1, 2026</div>
+
+      <div class="header-titles">
+        <h1>SDO ANTIPOLO: MATHEMATICS HUB</h1>
+        <p class="subtitle">Centralized Mathematics Data and Resource Hub</p>
+      </div>
+
+      <div class="header-right">
+        <div class="social-bar">
+          <a href="https://www.facebook.com/profile.php?id=61550963996069" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+        
+        <div class="pst-container">
+          <div class="pst-widget">
+            <div class="pst-label">Philippine Standard Time</div>
+            <div id="pst-time" class="pst-time">00:00:00 AM</div>
+            <div id="pst-date" class="pst-date">Monday, January 1, 2026</div>
+          </div>
         </div>
       </div>
     </div>
-
-  </div>
-</header>
-
-<script>
-  function updatePST() {
-    const now = new Date();
-    const tz = 'Asia/Manila';
-    
-    const timeStr = now.toLocaleTimeString('en-US', { 
-      timeZone: tz, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true 
-    });
-    const dateStr = now.toLocaleDateString('en-US', { 
-      timeZone: tz, weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
-    });
-
-    document.getElementById('pst-time').textContent = timeStr;
-    document.getElementById('pst-date').textContent = dateStr;
-  }
-
-  updatePST();
-  setInterval(updatePST, 1000);
-</script>
   </header>
 
   <!-- Navigation Bar -->
@@ -86,8 +152,9 @@
       <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
         <i class="fas fa-bars"></i>
       </button>
+
       <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li class="dropdown">
           <a href="#">LOCAL RMA <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
@@ -116,7 +183,7 @@
         <li><a href="school.html">SCHOOL</a></li>
         <li><a href="index.html#facebook-section">FB Page</a></li>
         <li class="dropdown">
-          <a href="#">LEARNING RESOURCES <i class="fas fa-chevron-down"></i></a>
+          <a href="#" class="active">LEARNING RESOURCES <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="sample-examinations.html">Sample Examinations (M365)</a></li>
             <li><a href="mfas-materials.html">MFAS Materials</a></li>
@@ -127,97 +194,123 @@
       </ul>
     </div>
   </nav>
-  <!--MFAS MATERIALS-->
-<div>
-<iframe src="https://script.google.com/macros/s/AKfycbw4LA_3pi6Yk9dCFcy26Et1vffPj_B54PBQ6sU6yLXIdEc0smeIxDGm1yoP-W6ZogRgtw/exec" frameborder="0" width="100%" height="600px"></iframe></div>
 
+  <!-- MFAS MATERIALS Content -->
+  <div>
+    <iframe src="https://script.google.com/macros/s/AKfycbw4LA_3pi6Yk9dCFcy26Et1vffPj_B54PBQ6sU6yLXIdEc0smeIxDGm1yoP-W6ZogRgtw/exec" frameborder="0" width="100%" height="600px"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 by Math ICT | Division of Antipolo City</p>
+    </div>
+
+    <!-- Visitor & View Counter Widget -->
+    <div id="visitor-stats" style="
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #333;
+    ">
+      <div>
+        <strong>Page Views:</strong> 
+        <span id="view-count" style="color: #0d6efd; font-weight: bold;">Loading...</span>
+      </div>
+      <div style="border-left: 1px solid #ccc; padding-left: 15px;">
+        <strong>Your Location:</strong> 
+        <span id="visitor-location" style="font-weight: 500;">Detecting...</span>
+      </div>
+      <div style="border-left: 1px solid #ccc; padding-left: 15px;">
+        <strong>Traffic Source:</strong> 
+        <span id="visitor-referrer" style="font-weight: 500;">Checking...</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // 1. PST Clock Script
+    function updatePST() {
+      const now = new Date();
+      const tz = 'Asia/Manila';
+      const timeStr = now.toLocaleTimeString('en-US', { timeZone: tz, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+      const dateStr = now.toLocaleDateString('en-US', { timeZone: tz, weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+      document.getElementById('pst-time').textContent = timeStr;
+      document.getElementById('pst-date').textContent = dateStr;
+    }
+    updatePST();
+    setInterval(updatePST, 1000);
+
+    // 2. Mobile Navbar Toggle Script
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // 3. Enable Dropdown Clicks for Mobile Touch Screens
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+      dropdown.addEventListener('click', (e) => {
+        if (window.innerWidth <= 868) {
+          dropdown.classList.toggle('open');
+        }
+      });
+    });
+
+    // 4. View Counter Script
+    async function initMFASCounter() {
+      const namespace = "sdoantipolo-mathhub-mfas-materials";
+      const key = "pageviews";
+
+      try {
+        const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
+        const data = await res.json();
+        if (data && data.count !== undefined) {
+          document.getElementById('view-count').textContent = data.count.toLocaleString();
+        } else {
+          document.getElementById('view-count').textContent = '1';
+        }
+      } catch (e) {
+        document.getElementById('view-count').textContent = 'Unavailable';
+      }
+
+      try {
+        const geoRes = await fetch('https://ipapi.co/json/');
+        const geoData = await geoRes.json();
+        if (geoData.city && geoData.country_name) {
+          document.getElementById('visitor-location').textContent = `${geoData.city}, ${geoData.region}, ${geoData.country_name}`;
+        } else {
+          document.getElementById('visitor-location').textContent = 'Location unavailable';
+        }
+      } catch (e) {
+        document.getElementById('visitor-location').textContent = 'Unknown';
+      }
+
+      const ref = document.referrer;
+      if (ref) {
+        try {
+          const url = new URL(ref);
+          document.getElementById('visitor-referrer').textContent = url.hostname;
+        } catch (e) {
+          document.getElementById('visitor-referrer').textContent = ref;
+        }
+      } else {
+        document.getElementById('visitor-referrer').textContent = 'Direct Visit';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initMFASCounter);
+  </script>
 
 </body>
-
-
-
- <!-- Footer -->
-<footer class="site-footer">
-  <div class="container footer-content">
-    <p>&copy; 2026 by Math ICT | Division of Antipolo City</p>
-  </div>
-
-  <!-- Visitor & View Counter Widget -->
-  <div id="visitor-stats" style="
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 12px;
-    padding: 10px 18px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #333;
-  ">
-    <div>
-      <strong>Page Views:</strong> 
-      <span id="view-count" style="color: #0d6efd; font-weight: bold;">Loading...</span>
-    </div>
-    <div style="border-left: 1px solid #ccc; padding-left: 15px;">
-      <strong>Your Location:</strong> 
-      <span id="visitor-location" style="font-weight: 500;">Detecting...</span>
-    </div>
-    <div style="border-left: 1px solid #ccc; padding-left: 15px;">
-      <strong>Traffic Source:</strong> 
-      <span id="visitor-referrer" style="font-weight: 500;">Checking...</span>
-    </div>
-  </div>
-</footer>
-  
-
-<script>
-  async function initMFASCounter() {
-    const namespace = "sdoantipolo-mathhub-mfas-materials";
-    const key = "pageviews";
-
-    // 1. Fetch Page View Count
-    try {
-      const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
-      const data = await res.json();
-      if (data && data.count !== undefined) {
-        document.getElementById('view-count').textContent = data.count.toLocaleString();
-      } else {
-        document.getElementById('view-count').textContent = '1';
-      }
-    } catch (e) {
-      document.getElementById('view-count').textContent = 'Unavailable';
-    }
-
-    // 2. Fetch Visitor Location
-    try {
-      const geoRes = await fetch('https://ipapi.co/json/');
-      const geoData = await geoRes.json();
-      if (geoData.city && geoData.country_name) {
-        document.getElementById('visitor-location').textContent = `${geoData.city}, ${geoData.region}, ${geoData.country_name}`;
-      } else {
-        document.getElementById('visitor-location').textContent = 'Location unavailable';
-      }
-    } catch (e) {
-      document.getElementById('visitor-location').textContent = 'Unknown';
-    }
-
-    // 3. Detect Traffic Source
-    const ref = document.referrer;
-    if (ref) {
-      try {
-        const url = new URL(ref);
-        document.getElementById('visitor-referrer').textContent = url.hostname;
-      } catch (e) {
-        document.getElementById('visitor-referrer').textContent = ref;
-      }
-    } else {
-      document.getElementById('visitor-referrer').textContent = 'Direct Visit';
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', initMFASCounter);
-</script>
-
 </html>
