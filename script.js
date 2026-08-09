@@ -171,7 +171,7 @@ customElements.define('special-footer', SpecialFooter)
 
 
 // Unique workspace/namespace and key for your site
-const namespace = "sdo-antipolo-math-hub";
+const namespace = "SDO ANTIPOLO: MATHEMATICS HUB";
 const key = "visits";
 
 // Fetch and increment page views using CounterAPI.dev
