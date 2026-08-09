@@ -55,7 +55,7 @@ class SpecialHeader extends HTMLElement {
       <p class="subtitle">Centralized Mathematics Data and Resource Hub</p>
     </div>
 
-    <!-- 3. KANAN: Facebook Icon + PST Clock -->
+    <!-- 3. KANAN: Facebook Icon + PST Clock + Visitor Counter -->
     <div class="header-right">
       <div class="social-bar">
         <a href="https://www.facebook.com/profile.php?id=61550963996069" target="_blank" aria-label="Facebook">
@@ -70,6 +70,7 @@ class SpecialHeader extends HTMLElement {
           <div id="pst-date" class="pst-date">Monday, January 1, 2026</div>
         </div>
       </div>
+
     </div>
   </div>
 </header>
@@ -119,6 +120,16 @@ class SpecialHeader extends HTMLElement {
         </li>
         <li><a href="contacts.html">Contact</a></li>
       </ul>
+    <!-- ADDED: Visitor Counter Widget -->
+      <div class="visitor-counter-container">
+        <div class="visitor-widget">
+          <i class="fas fa-eye visitor-icon"></i>
+          <div class="visitor-info">
+            <span class="visitor-label">Total Visitors</span>
+            <span id="visitor-count" class="visitor-count">000,000</span>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   `
@@ -157,3 +168,25 @@ customElements.define('special-footer', SpecialFooter)
 
   updatePST();
   setInterval(updatePST, 1000);
+
+
+
+let visits = localStorage.getItem("site_visits") || 0;
+visits++;
+localStorage.setItem("site_visits", visits);
+document.getElementById("visitor-count").innerText = Number(visits).toLocaleString();
+
+
+// Change 'sdo-antipolo-math-hub' to any unique identifier for your project
+const namespace = "sdo-antipolo-math-hub";
+const key = "visits";
+
+fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("visitor-count").innerText = data.value.toLocaleString();
+  })
+  .catch(error => {
+    console.error("Error fetching visitor count:", error);
+    document.getElementById("visitor-count").innerText = "---";
+  });
