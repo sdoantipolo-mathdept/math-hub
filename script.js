@@ -170,13 +170,6 @@ customElements.define('special-footer', SpecialFooter)
   setInterval(updatePST, 1000);
 
 
-
-let visits = localStorage.getItem("site_visits") || 0;
-visits++;
-localStorage.setItem("site_visits", visits);
-document.getElementById("visitor-count").innerText = Number(visits).toLocaleString();
-
-
 // Change 'sdo-antipolo-math-hub' to any unique identifier for your project
 const namespace = "sdo-antipolo-math-hub";
 const key = "visits";
