@@ -170,14 +170,25 @@ customElements.define('special-footer', SpecialFooter)
   setInterval(updatePST, 1000);
 
 
-// Change 'sdo-antipolo-math-hub' to any unique identifier for your project
+// Unique workspace/namespace and key for your site
 const namespace = "sdo-antipolo-math-hub";
 const key = "visits";
 
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-  .then(response => response.json())
+// Fetch and increment page views using CounterAPI.dev
+fetch(`https://counterapi.dev/v1/${namespace}/${key}/up`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
-    document.getElementById("visitor-count").innerText = data.value.toLocaleString();
+    // CounterAPI returns count in data.count
+    if (data && typeof data.count !== "undefined") {
+      document.getElementById("visitor-count").innerText = data.count.toLocaleString();
+    } else {
+      document.getElementById("visitor-count").innerText = "1";
+    }
   })
   .catch(error => {
     console.error("Error fetching visitor count:", error);
