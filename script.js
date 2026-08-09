@@ -170,12 +170,11 @@ customElements.define('special-footer', SpecialFooter)
   setInterval(updatePST, 1000);
 
 
-// Unique workspace/namespace and key for your site
-const namespace = "math-hub";
+const namespace = "sdo-antipolo-math-hub";
 const key = "visits";
 
-// Fetch and increment page views using CounterAPI.dev
-fetch(`https://counterapi.dev/v1/${namespace}/${key}/up`)
+// Gumagamit ng countapi.net API
+fetch(`https://api.countapi.net/hit/${namespace}/${key}`)
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -183,14 +182,12 @@ fetch(`https://counterapi.dev/v1/${namespace}/${key}/up`)
     return response.json();
   })
   .then(data => {
-    // CounterAPI returns count in data.count
-    if (data && typeof data.count !== "undefined") {
-      document.getElementById("visitor-count").innerText = data.count.toLocaleString();
-    } else {
-      document.getElementById("visitor-count").innerText = "1";
+    console.log("Counter Success:", data);
+    if (data && typeof data.value !== "undefined") {
+      document.getElementById("visitor-count").innerText = data.value.toLocaleString();
     }
   })
   .catch(error => {
-    console.error("Error fetching visitor count:", error);
-    document.getElementById("visitor-count").innerText = "---";
+    console.error("Error sa Counter API:", error);
+    document.getElementById("visitor-count").innerText = "000,001";
   });
