@@ -121,15 +121,22 @@ class SpecialHeader extends HTMLElement {
         <li><a href="contacts.html">Contact</a></li>
       </ul>
     <!-- ADDED: Visitor Counter Widget -->
-      <div class="visitor-counter-container">
-        <div class="visitor-widget">
-          <i class="fas fa-eye visitor-icon"></i>
-          <div class="visitor-info">
-            <span class="visitor-label">Total Visitors</span>
-            <span id="visitor-count" class="visitor-count">000,000</span>
-          </div>
-        </div>
+      <!-- 3. VISITOR COUNTER (Dito ito lalabas) -->
+        <div class="visitor-counter-container">
+          <div class="visitor-widget">
+            <i class="fas fa-eye visitor-icon"></i>
+            <div class="visitor-info">
+              <span class="visitor-label">Total Visitors</span>
+              <span id="visitor-count" class="visitor-count"><!-- hitwebcounter Code START -->
+                <a href="https://www.hitwebcounter.com/" target="_blank" rel="noopener" title="Website">
+                <img src="https://www.hitwebcounter.com/counter/counter.php?page=21513944&amp;style=0006&amp;nbdigits=6&amp;type=page" alt="Website" decoding="async" style="border:0;max-width:100%;height:auto;" />
+                </a>
+                <br />
+                <a href="https://www.hitwebcounter.com/character-counter" target="_blank" rel="noopener" style="font-family:Geneva, Arial, Helvetica;font-size:10px;color:#B3B7B3;text-decoration:underline;font-weight:strong;"></a>
+                <!-- hitwebcounter Code END --></span>
       </div>
+    </div>
+    </div>
     </div>
   </nav>
   `
@@ -169,33 +176,3 @@ customElements.define('special-footer', SpecialFooter)
   updatePST();
   setInterval(updatePST, 1000);
 
-
-function updateVisitorCount() {
-  const counterElement = document.getElementById("visitor-count");
-  
-  // 1. Kumuha ng kasalukuyang count sa local storage
-  let currentVisits = parseInt(localStorage.getItem("sdo_math_hub_views") || "1050");
-  
-  // 2. Dagdagan ng 1
-  currentVisits++;
-  localStorage.setItem("sdo_math_hub_views", currentVisits);
-  
-  // 3. Ipakita agad sa screen (Instant display, walang loading delay)
-  counterElement.innerText = currentVisits.toLocaleString();
-
-  // 4. Subukang i-sync sa external API sa background (Opsyonal)
-  fetch("https://api.countapi.net/hit/sdo-antipolo-math-hub/visits")
-    .then(res => res.json())
-    .then(data => {
-      if (data && data.value) {
-        counterElement.innerText = data.value.toLocaleString();
-      }
-    })
-    .catch(err => {
-      // Kapag nakablock ang API, mananatili lang sa LocalStorage count (No Error Message!)
-      console.log("Using local counter backup.");
-    });
-}
-
-// Patakbuhin ang counter
-updateVisitorCount();
