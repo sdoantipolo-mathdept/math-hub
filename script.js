@@ -170,28 +170,19 @@ customElements.define('special-footer', SpecialFooter)
   setInterval(updatePST, 1000);
 
 
-const namespace = "sdo-antipolo-math-hub";
-const key = "visits";
+const projectID = "sdo-antipolo-math-hub";
 
-
-const namespace = "sdo-antipolo-math-hub";
-const key = "visits";
-
-// Gumagamit ng countapi.net API
-fetch(`https://api.countapi.net/hit/${namespace}/${key}`)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
+fetch(`https://api.counterapi.dev/v1/${projectID}/visits/up`)
+  .then(res => res.json())
   .then(data => {
-    console.log("Counter Success:", data);
-    if (data && typeof data.value !== "undefined") {
-      document.getElementById("visitor-count").innerText = data.value.toLocaleString();
+    if (data && data.count) {
+      document.getElementById("visitor-count").innerText = data.count.toLocaleString();
     }
   })
-  .catch(error => {
-    console.error("Error sa Counter API:", error);
-    document.getElementById("visitor-count").innerText = "000,001";
+  .catch(() => {
+    // Switch to simple local backup kapag nag-fail ang network
+    let localCount = localStorage.getItem("backup_visits") || 100;
+    localCount++;
+    localStorage.setItem("backup_visits", localCount);
+    document.getElementById("visitor-count").innerText = Number(localCount).toLocaleString();
   });
