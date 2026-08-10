@@ -1,3 +1,31 @@
+// Function para i-load ang Google Font via JavaScript
+function loadGoogleFont() {
+  // 1. Preconnect to Google Fonts
+  const preconnect1 = document.createElement('link');
+  preconnect1.rel = 'preconnect';
+  preconnect1.href = 'https://fonts.googleapis.com';
+  document.head.appendChild(preconnect1);
+
+  const preconnect2 = document.createElement('link');
+  preconnect2.rel = 'preconnect';
+  preconnect2.href = 'https://fonts.gstatic.com';
+  preconnect2.crossOrigin = 'anonymous';
+  document.head.appendChild(preconnect2);
+
+  // 2. Load Graduate Font stylesheet
+  const fontLink = document.createElement('link');
+  fontLink.rel = 'stylesheet';
+  fontLink.href = 'https://fonts.googleapis.com/css2?family=Graduate&display=swap';
+  document.head.appendChild(fontLink);
+}
+
+// Patakbuhin ang function
+loadGoogleFont();
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Navigation Toggle
   const navToggle = document.getElementById('navToggle');
