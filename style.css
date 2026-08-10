@@ -48,7 +48,8 @@ body {
 .brand h1 {
   font-size: 1.0rem;
   font-weight: 700;
-  letter-spacing: 0.4px;
+ /* WIDE CHARACTER SPACING (A B C) */
+  letter-spacing: 0.4em;
 }
 
 .brand .subtitle {
@@ -446,7 +447,7 @@ body {
   line-height: 1;
   color: #0b2580; /* Dark blue fill color #0b2580*/
   text-transform: uppercase;
-  letter-spacing: 0.1px;
+  letter-spacing: -0.1px;
   margin: 0;
   padding: 0;
 
