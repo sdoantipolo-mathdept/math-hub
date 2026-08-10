@@ -444,7 +444,7 @@ body {
   font-size: 3.0rem; /* I-adjust ang laki depende sa sukat ng header */
   font-weight: 800;
   line-height: 1;
-  color: #ffffff; /* Dark blue fill color #0b2580*/
+  color: #0b2580; /* Dark blue fill color #0b2580*/
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
