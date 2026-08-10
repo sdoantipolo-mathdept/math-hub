@@ -452,7 +452,7 @@ body {
 
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.2);         /* 1.25 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.25);         /* 1.25 expands width by 25% (adjust as needed) */
   transform-origin: center;       /* Keeps alignment centered */
 
   /* Double-line / Inline outline effect */
@@ -460,17 +460,16 @@ body {
   paint-order: stroke fill;          /* Prevents the stroke from eating into the letter */
 
   text-shadow: 
-   /* 0 0 2px #0b2580,
+    /*0 0 2px #0b2580,
     1px 1px 0 #0b2580,
     -1px -1px 0 #0b2580,
     1px -1px 0 #0b2580,
-    -1px 1px 0 #0b2580
-  
-   -1px -1px 0 #ffffff,  
+    -1px 1px 0 #0b2580;*/
+    -1px -1px 0 #ffffff,  
      1px -1px 0 #ffffff,
     -1px  1px 0 #ffffff,
      1px  1px 0 #ffffff,
-     0px  0px 4px rgba(11, 37, 128, 0.8);*/
+     0px  0px 4px rgba(11, 37, 128, 0.8);
 }
 
 .header-titles .subtitle {
