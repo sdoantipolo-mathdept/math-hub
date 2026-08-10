@@ -453,7 +453,7 @@ body {
 
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.25);         /* 1.25 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.15);         /* 1.15 expands width by 25% (adjust as needed) */
   transform-origin: center;       /* Keeps alignment centered */
 
   /* Double-line / Inline outline effect */
@@ -480,7 +480,7 @@ body {
   font-weight: 400;
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.25);         /* 1.25 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.15);         /* 1.15 expands width by 25% (adjust as needed) */
   transform-origin: padding-left;       /* Keeps alignment centered */
 }
 
