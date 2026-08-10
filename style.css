@@ -49,7 +49,7 @@ body {
   font-size: 1.0rem;
   font-weight: bold;
  /* WIDE CHARACTER SPACING (A B C) */
-  letter-spacing: 0.01em;;
+  letter-spacing: 0em;;
 }
 
 .brand .subtitle {
@@ -447,17 +447,17 @@ body {
   line-height: 1;
   color: #0b2580; /* Dark blue fill color #0b2580*/
   text-transform: uppercase;
-  letter-spacing: 0.05em;;
+  letter-spacing: 0.0em;;
   margin: 0;
   padding: 0;
 
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.255);         /* 1.15 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.25);         /* 1.15 expands width by 25% (adjust as needed) */
   transform-origin: center;       /* Keeps alignment centered */
 
   /* Double-line / Inline outline effect */
-  -webkit-text-stroke: 2px #ffffff;; /* White inner border */
+  -webkit-text-stroke: 1px #ffffff;; /* White inner border */
   paint-order: stroke fill;          /* Prevents the stroke from eating into the letter */
 
   text-shadow: 
@@ -480,7 +480,7 @@ body {
   font-weight: 400;
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.255);         /* 1.15 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.25);         /* 1.15 expands width by 25% (adjust as needed) */
   transform-origin: padding-left;       /* Keeps alignment centered */
 }
 
