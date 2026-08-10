@@ -625,7 +625,7 @@ body {
 
   /* 4. Paliitin din ang logo sa loob ng navbar (kung mayroon) */
   .nav-logo, navbar img {
-    height: 35px !important;      /* Adjust base sa laki ng logo mo */
+    height: 20px !important;      /* Adjust base sa laki ng logo mo */
   }
 
 }
@@ -635,7 +635,7 @@ body {
 /* Layout alignment for the right section */
 .header-right {
   display: flex;
-  align-items: right;
+  align-items: center;
   gap: 15px;
 }
 
