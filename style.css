@@ -48,7 +48,7 @@ body {
 .brand h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 .brand .subtitle {
@@ -380,8 +380,8 @@ body {
 }
 
 .sub-title {
-  color: #d1d5db;                 /* Light Gray color */
-  font-size: 0.95rem;
+  color: rosybrown;                 /* #d1d5db Light Gray color */
+  font-size: .95rem;
   margin: 4px 0 0 0;              /* Kaunting distansya mula sa main title */
   font-weight: 400;
 }
@@ -389,7 +389,7 @@ body {
 
 /* Buong Header Background */
 .site-header {
-  background-color: #1b3687; /* Dark blue background mo */
+  background-color: yellow; /* Dark blue background mo #1b3687 */
   padding: 12px 25px;
   width: 100%;
 }
@@ -399,8 +399,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  max-width: 1400px;
+  gap: 115px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -408,7 +408,7 @@ body {
 .header-logos {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .header-img {
@@ -430,18 +430,57 @@ body {
 }
 
 .header-titles h1 {
-  color: #ffffff;
+  /*font-family: 'Graduate', 'Arial Black', sans-serif;
+  color: #0000ff;
   font-size: 1.6rem;
   font-weight: 800;
   margin: 0;
   line-height: 1.2;
+  /* Outline / Border effect */
+  /*-webkit-text-stroke: 0.5px #ffffff; /* Puting linya sa gilid */
+  /*filter: drop-shadow(0px 0px 1px #0d2380);*/
+
+  font-family: 'Graduate', 'Arial Black', sans-serif;
+  font-size: 3.0rem; /* I-adjust ang laki depende sa sukat ng header */
+  font-weight: 800;
+  line-height: 1;
+  color: #0b2580; /* Dark blue fill color */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+
+  /* STRETCH LETTER WIDTH HORIZONTALLY */
+  display: inline-block;          /* Required for transform to work on h1 */
+  transform: scaleX(1.25);         /* 1.25 expands width by 25% (adjust as needed) */
+  transform-origin: center;       /* Keeps alignment centered */
+
+  /* Double-line / Inline outline effect */
+  -webkit-text-stroke: 3.5px #0b2580;; /* White inner border */
+  paint-order: stroke fill;          /* Prevents the stroke from eating into the letter */
+
+  text-shadow: 
+    /*0 0 2px #0b2580,
+    1px 1px 0 #0b2580,
+    -1px -1px 0 #0b2580,
+    1px -1px 0 #0b2580,
+    -1px 1px 0 #0b2580;*/
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff,
+     0px  0px 4px rgba(11, 37, 128, 0.8);
 }
 
 .header-titles .subtitle {
-  color: #d1d5db;
+  color: brown;     /*#d1d5db*/
   font-size: 0.9rem;
-  margin: 4px 0 0 0;
+  margin: 1px 0 0 0;
   font-weight: 400;
+  /* STRETCH LETTER WIDTH HORIZONTALLY */
+  display: inline-block;          /* Required for transform to work on h1 */
+  transform: scaleX(1.25);         /* 1.25 expands width by 25% (adjust as needed) */
+  transform-origin: padding-left;       /* Keeps alignment centered */
 }
 
 /* 3. SOCIAL + CLOCK (Kanan) */
@@ -453,13 +492,13 @@ body {
 }
 
 .social-bar a {
-  color: #ffffff;
+  color: #000000;
   font-size: 1.5rem;
   transition: color 0.2s;
 }
 
 .social-bar a:hover {
-  color: #60a5fa;
+  color: #60a5fa;   /*#60a5fa*/
 }
 
 /* PST Clock Text Styles */
@@ -470,7 +509,7 @@ body {
 
 .pst-label {
   font-size: 0.65rem;
-  color: #9ca3af;
+  color: black;   /*#9ca3af*/
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -478,13 +517,13 @@ body {
 .pst-time {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #000000;
   line-height: 1.1;
 }
 
 .pst-date {
   font-size: 0.75rem;
-  color: #d1d5db;
+  color: #000000;   /*#d1d5db*/
 }
 
 /* Siguraduhin na ang card ay nakahanda sa responsive chart */
@@ -609,7 +648,7 @@ body {
 .visitor-widget {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background-color: rgba(255, 255, 255, 0.1); /* Subtle dark translucent fill */
   padding: 6px 12px;
   border-radius: 6px;
@@ -618,7 +657,7 @@ body {
 
 .visitor-icon {
   font-size: 1.1rem;
-  color: #00bcd4; /* Adjust icon color to match your theme #00bcd4*/
+  color: #ffffff; /* Adjust icon color to match your theme #00bcd4*/
 }
 
 .visitor-info {
@@ -630,10 +669,11 @@ body {
 
 .visitor-label {
   font-size: 0.65rem;
-  color: #00bcd4; /* Adjust icon color to match your theme #00bcd4*/
+  color: #ffffff; /* Adjust icon color to match your theme #00bcd4*/
   text-transform: uppercase;
   letter-spacing: 0.5px;
   opacity: 100;
+  align-items: center;
 }
 
 .visitor-count {
