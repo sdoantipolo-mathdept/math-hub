@@ -460,28 +460,28 @@ body {
   -webkit-text-stroke: 1px #ffffff;; /* White inner border */
   paint-order: stroke fill;          /* Prevents the stroke from eating into the letter */
 
- /* text-shadow: 
-    0 0 2px #0b2580,
+ text-shadow: 
+    /*0 0 2px #0b2580,
     1px 1px 0 #0b2580,
     -1px -1px 0 #0b2580,
     1px -1px 0 #0b2580,
-    -1px 1px 0 #0b2580;
+    -1px 1px 0 #0b2580;*/
     -1px -1px 0 #0b2580,  
      1px -1px 0 #0b2580,
     -1px  1px 0 #0b2580,
      1px  1px 0 #0b2580,
-     0px  0px 4px rgba(11, 37, 128, 0.8);*/
+     0px  0px 4px rgba(11, 37, 128, 0.8);
 }
 
 .header-titles .subtitle {
-  color: brown;     /*#d1d5db*/
+  color: black;     /*#d1d5db*/
   font-size: 0.9rem;
   margin: 1px 0 0 0;
   font-weight: 400;
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
   transform: scaleX(1.25);         /* 1.15 expands width by 25% (adjust as needed) */
-  transform-origin: padding-left;       /* Keeps alignment centered */
+  transform-origin: centered;       /* Keeps alignment centered */
 }
 
 /* 3. SOCIAL + CLOCK (Kanan) */
