@@ -726,7 +726,7 @@ body {
 /* ==========================================
    RESPONSIVE MOBILE STYLES (Para sa Smartphones)
    ========================================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   
   /* 1. I-center ang buong header sa mobile */
   .header-container {
@@ -737,7 +737,7 @@ body {
 
   /* 2. Paliitin nang kaunti ang Title para magkasya */
   .header-titles h1 {
-    font-size: 1.5rem !important; /* Binabawasan ang laki para hindi lumampas */
+    font-size: 1rem !important; /* Binabawasan ang laki para hindi lumampas */
     letter-spacing: 0.1em !important; /* Binabawasan din ang sobrang patlang */
     transform: none !important; /* Tinatanggal muna ang scaleX sa mobile kung mayruon */
   }
