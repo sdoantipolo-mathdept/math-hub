@@ -730,22 +730,4 @@ body {
   }
 }
 
-/* Para sa MASYADONG MALIIT na Screen (Smartphones na mas maliit sa 480px) */
-@media screen and (max-width: 480px) {
-  .header-right {
-    flex-direction: column; /* Pag-stack-in pababa ang Facebook, Clock, at Counter */
-    align-items: center;
-  }
 
-  .pst-container, 
-  .visitor-counter-container {
-    width: 100%; /* Gagawing full width para pantay ang kahon */
-    max-width: 280px;
-  }
-
-  .pst-widget, 
-  .visitor-widget {
-    justify-content: center;
-    text-align: center;
-  }
-}
