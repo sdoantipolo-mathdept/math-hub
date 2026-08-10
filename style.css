@@ -682,3 +682,123 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   MOBILE HEADER ADJUSTMENTS (Paliitin at Iisa ang Linya)
+   Target: Screens 768px and below (Smartphones & Tablets)
+   ============================================================ */
+@media screen and (max-width: 768px) {
+
+  /* 1. Paliitin ang padding ng buong Header at bawasan ang gap */
+  .site-header {
+    padding: 6px 8px !important; /* Binawasan ang padding para hindi mataba */
+  }
+
+  .header-container {
+    display: flex !important;
+    flex-direction: row !important; /* Tinitiyak na iisang linya lang horizontally */
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 6px !important; /* Mula 100px, ginagawang 6px para magkasya lahat */
+    padding: 0 4px !important;
+  }
+
+  /* 2. Paliitin ang laki ng mga Logos sa kaliwa */
+  .header-logos {
+    gap: 4px !important;
+    flex-shrink: 0; /* Pigilan ang pagpisat sa logo */
+  }
+
+  .header-img {
+    height: 30px !important; /* Mula 60px -> 30px */
+  }
+
+  .header-img.logo-larger {
+    height: 36px !important; /* Mula 75px -> 36px */
+  }
+
+  /* 3. Paliitin ang Title at Subtitle sa gitna */
+  .header-titles {
+    flex-shrink: 1; /* Pinapayagang mag-adjust ang laki sa gitna */
+    min-width: 0;
+  }
+
+  .header-titles h1 {
+    font-size: 0.85rem !important; /* Mula 3.0rem -> 0.85rem para magkasya */
+    letter-spacing: 0 !important;
+    transform: none !important; /* Tinanggal muna ang scaleX(1.25) sa mobile para hindi lumampas */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Kakainin ng ellipsis (...) kung sakaling sobrang sikip */
+    -webkit-text-stroke: 0.3px #ffffff !important;
+  }
+
+  .header-titles .subtitle {
+    font-size: 0.55rem !important; /* Mula 0.9rem -> 0.55rem */
+    transform: none !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* 4. Paliitin ang Right Section (PST Clock at Visitor Counter) */
+  .header-right {
+    display: flex !important;
+    flex-direction: row !important; /* Naka-horizontal layout pa rin sa kanan */
+    align-items: center !important;
+    gap: 5px !important;
+    flex-shrink: 0; /* Pigilan ang pagkawala sa screen */
+  }
+
+  /* PST Clock adjustments */
+  .pst-widget {
+    text-align: right;
+  }
+
+  .pst-label {
+    font-size: 0.45rem !important;
+    letter-spacing: 0;
+  }
+
+  .pst-time {
+    font-size: 0.75rem !important; /* Mula 1.3rem -> 0.75rem */
+  }
+
+  .pst-date {
+    font-size: 0.5rem !important;
+    display: none; /* Tinatago ang buong petsa sa mobile para sa karagdagang space (Opsyonal) */
+  }
+
+  /* Visitor Counter adjustments */
+  .visitor-widget {
+    padding: 3px 6px !important;
+    gap: 4px !important;
+  }
+
+  .visitor-icon {
+    font-size: 0.75rem !important;
+  }
+
+  .visitor-label {
+    font-size: 0.45rem !important;
+  }
+
+  .visitor-count {
+    font-size: 0.7rem !important;
+  }
+}
