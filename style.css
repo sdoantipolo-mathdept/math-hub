@@ -456,7 +456,7 @@ body {
   transform-origin: center;       /* Keeps alignment centered */
 
   /* Double-line / Inline outline effect */
-  -webkit-text-stroke: .025px #ffffff;; /* White inner border */
+  -webkit-text-stroke: 10px #ffffff;; /* White inner border */
   paint-order: stroke fill;          /* Prevents the stroke from eating into the letter */
 
   text-shadow: 
