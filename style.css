@@ -47,7 +47,7 @@ body {
 
 .brand h1 {
   font-size: 1.0rem;
-  font-weight: 700;
+  font-weight: bold;
  /* WIDE CHARACTER SPACING (A B C) */
   letter-spacing: 0.01em;;
 }
@@ -375,7 +375,7 @@ body {
 .main-title {
   /*color: #ffffff;*/
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: bold;
   margin: 0;
   line-height: 1.2;
 }
@@ -434,7 +434,7 @@ body {
   /*font-family: 'Graduate', 'Arial Black', sans-serif;
   color: #0000ff;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: bold;
   margin: 0;
   line-height: 1.2;
   /* Outline / Border effect */
@@ -443,7 +443,7 @@ body {
 
   font-family: 'Graduate', 'Arial Black', sans-serif;
   font-size: 3.0rem; /* I-adjust ang laki depende sa sukat ng header */
-  font-weight: 800;
+  font-weight: bold;
   line-height: 1;
   color: #0b2580; /* Dark blue fill color #0b2580*/
   text-transform: uppercase;
@@ -453,7 +453,7 @@ body {
 
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.15);         /* 1.15 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.255);         /* 1.15 expands width by 25% (adjust as needed) */
   transform-origin: center;       /* Keeps alignment centered */
 
   /* Double-line / Inline outline effect */
@@ -480,7 +480,7 @@ body {
   font-weight: 400;
   /* STRETCH LETTER WIDTH HORIZONTALLY */
   display: inline-block;          /* Required for transform to work on h1 */
-  transform: scaleX(1.15);         /* 1.15 expands width by 25% (adjust as needed) */
+  transform: scaleX(1.255);         /* 1.15 expands width by 25% (adjust as needed) */
   transform-origin: padding-left;       /* Keeps alignment centered */
 }
 
