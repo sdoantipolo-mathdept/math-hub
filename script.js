@@ -124,7 +124,7 @@ class SpecialHeader extends HTMLElement {
           <a href="#">ISSUANCES <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="mathlinks.html">Math Teachers' Reference Folders</a></li>
-            <li><a href="https://depedantipolocity.edu.ph/division-memorandum/" target="_blank">SDO Antipolo Issuances</a></li>
+            <li><a href="https://script.google.com/a/macros/deped.gov.ph/s/AKfycbwjg3KdVkGZxju-CFqumNECin9GOczGHYA2rXL_x_jSJ9r5NqsQMeIrVDnCoO3LCvY/exec" target="_blank">SDO Antipolo Issuances</a></li>
             <li><a href="https://www.deped.gov.ph/deped-memorandum/" target="_blank">DepEd Memoranda</a></li>
             <li><a href="https://www.deped.gov.ph/deped-orders/" target="_blank">DepEd Orders</a></li>
           </ul>
