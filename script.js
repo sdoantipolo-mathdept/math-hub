@@ -175,7 +175,7 @@ class SpecialFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML =`<footer class="site-footer">
     <div class="container footer-content">
-      <p>&copy; 2026 by Math ICT | Division of Antipolo City</p>
+      <p>&copy; 2026 by Math ICT | City Schools Division Office of Antipolo</p>
     </div>
   </footer>`
   }
