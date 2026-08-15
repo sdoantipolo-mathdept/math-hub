@@ -164,6 +164,40 @@
   <!-- Footer -->
   <special-footer></special-footer>
   <script src="script.js"></script>
+  <script>
+  (function () {
+    const originalTitle = "SDO Antipolo: Mathematics Hub";
+    let titleText = originalTitle + "    ";
+    let speed = 250; // Speed in milliseconds
+    let timer = null;
+
+    function startMarquee() {
+      if (timer) return; // Prevent multiple intervals running at once
+      timer = setInterval(() => {
+        titleText = titleText.substring(1) + titleText.substring(0, 1);
+        document.title = titleText;
+      }, speed);
+    }
+
+    function stopMarquee() {
+      clearInterval(timer);
+      timer = null;
+      document.title = originalTitle; // Optionally reset title back to normal while inactive
+    }
+
+    // Pause/Resume based on tab visibility
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stopMarquee();
+      } else {
+        startMarquee();
+      }
+    });
+
+    // Start on initial page load
+    startMarquee();
+  })();
+</script>
 
 </body>
 </html>
