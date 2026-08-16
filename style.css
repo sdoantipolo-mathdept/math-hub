@@ -802,3 +802,115 @@ body {
     font-size: 0.7rem !important;
   }
 }
+
+
+
+
+
+/* =========================================
+   FEEDBACK SECTION
+========================================= */
+
+.feedback-section {
+  width: 100%;
+  max-width: 1200px;
+
+  /* Space outside the section */
+  margin: 50px auto;
+
+  /* Space inside the section */
+  padding: 20px;
+}
+
+
+/* =========================================
+   FEEDBACK FORM WRAPPER
+========================================= */
+
+.map-wrapper {
+  width: 100%;
+
+  /* Space around the iframe */
+  margin: 0 auto;
+
+  /* Inner spacing */
+  padding: 10px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   IFRAME
+========================================= */
+
+.map-wrapper iframe {
+  display: block;
+
+  width: 100%;
+
+  /*
+   * Adjust this height depending on
+   * the size of your feedback form.
+   */
+  height: 850px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .feedback-section {
+    margin: 35px auto;
+    padding: 15px;
+  }
+
+  .map-wrapper {
+    padding: 7px;
+    border-radius: 14px;
+  }
+
+  .map-wrapper iframe {
+    height: 850px;
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .feedback-section {
+    margin: 25px auto;
+    padding: 10px;
+  }
+
+  .map-wrapper {
+    padding: 5px;
+    border-radius: 12px;
+  }
+
+  .map-wrapper iframe {
+    height: 900px;
+    border-radius: 8px;
+  }
+}
