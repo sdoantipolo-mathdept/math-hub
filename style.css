@@ -816,10 +816,10 @@ body {
   max-width: 1200px;
 
   /* Space outside the section */
-  margin: 50px auto;
+  margin: 10px auto;
 
   /* Space inside the section */
-  padding: 20px;
+  padding: 10px;
 }
 
 
